@@ -48,5 +48,5 @@ class Trip {
   driver(){
     return this.driveId;
   }
-  }
+  
 }
