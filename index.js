@@ -53,15 +53,15 @@ class Passenger {
 
 let tripId=0;
 
-class Trip {
-  constructor(driver, passenger){
-    this.id=++tripId;
-    let myDriver= new Driver(driver);
-    this.driverId= myDriver.id;
-    let myPassenger = new Passenger(passenger);
-    this.passengerId= myPassenger.id;
-    store.trips.push(this);
-  }
+// class Trip {
+//   constructor(driver, passenger){
+//     this.id=++tripId;
+//     let myDriver= new Driver(driver);
+//     this.driverId= myDriver.id;
+//     let myPassenger = new Passenger(passenger);
+//     this.passengerId= myPassenger.id;
+//     store.trips.push(this);
+//   }
    driver(){
     return store.trips.find(driver => {
       return driver.id == this.driverId
