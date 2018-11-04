@@ -189,8 +189,8 @@ class Passenger {
 
   trips(){
     return store.trips.filter(trip =>{
-      return trip.passengerId === this.id
-    })
+      return trip.passengerId === this.id;
+    });
   }
 
   drivers() {
@@ -203,20 +203,20 @@ class Passenger {
 
 class Trip {
   constructor(id, driver, passenger){
-    this.id = id++
-    this.driver = driver
-    this.passenger = passenger
-    store.trips.push(this)
+    this.id = id++;
+    this.driver = driver;
+    this.passenger = passenger;
+    store.trips.push(this);
   }
 
   driver(){
     return store.trips.find(driver => {
-      return driver.id === this.driverId
-    })
+      return driver.id === this.driverId;
+    });
   }
   passenger(){
     return store.trips.find(passenger => {
-      return passenger.id === this.passengerId
-    })
+      return passenger.id === this.passengerId;
+    });
   }
 }
