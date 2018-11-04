@@ -62,15 +62,23 @@ let tripId=0;
 //     this.passengerId= myPassenger.id;
 //     store.trips.push(this);
 //   }
-   driver(){
-    return store.trips.find(driver => {
-      return driver.id == this.driverId
-    })
+  class Trip {
+    constructor(id, driver, passenger){
+      this.id = ++id
+      this.driver = driver
+      this.passenger = passenger
+      store.trips.push(this)
+    }
+ 
+    driver(){
+      return store.trips.find(driver => {
+      return driver.id == this.driverId;
+    });
   }
   passenger(){
     return store.trips.find(passenger => {
-      return passenger.id == this.passengerId
-    })
+      return passenger.id == this.passengerId;
+    });
   }
   
 }
