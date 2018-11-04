@@ -36,6 +36,19 @@ class Passenger {
     this.name=name;
     store.passengers.push(this);
   }
+  
+   trips(){
+      return store.trips.filter(trip =>{
+      return trip.passengerId == this.id;
+    });
+  }
+
+   drivers() {
+      return this.trips().map(trip => {
+      return trip.driver();
+      });
+   }
+  
 }
 
 let tripId=0;
