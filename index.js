@@ -45,4 +45,8 @@ class Trip {
     this.passengerId= myPassenger.id;
     store.trips.push(this);
   }
+  driver(){
+    return this.driveId;
+  }
+  }
 }
