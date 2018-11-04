@@ -152,9 +152,9 @@
 //     })  }
 // }
 let store = { drivers: [], passengers: [], trips: []}
-let driverId = 0
-let passengerId = 0
-let tripID = 0
+let driverId = 0;
+let passengerId = 0;
+let tripID = 0;
 
 
 
@@ -203,9 +203,10 @@ class Passenger {
 
 class Trip {
   constructor( driver, passenger){
-    this.id = id++;
-    this.driver = driver;
-    this.passenger = passenger;
+    // this.id = id++;
+    this.id=tripId++;
+    this.driverId = driver.id;
+    this.passengerId = passenger.id;
     store.trips.push(this);
   }
 
