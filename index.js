@@ -7,20 +7,24 @@ class Driver {
     this.name=name;
     store.drivers.push(this);
   }
+  
   //  returns all of the trips that driver had taken
   
-  trips(){
-    // driverId= driverId - 1;
-    return store.trips.filter(
-      function(trip) {
-        return trip.driverId === this.id;
-      }.bind(this)
-    );
-  }
+   trips() {
+     return store.trips.filter(trip => {
+     return trip.driverId == this.id;
+     })
+   }
+
+//   returns all of the passengers that driver has taken on a trip
+
+   passengers(){
+     return this.trips().map(trip => {
+       return trip.passenger()
+     })
+   }
   
-  passengers(){
-  
-  }
+ 
   
 }
 
